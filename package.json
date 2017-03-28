@@ -7,6 +7,8 @@
     "test": "tests"
   },
   "dependencies": {
+    "@types/debug": "^0.0.29",
+    "debug": "^2.6.3",
     "systemjs": "^0.19.41"
   },
   "devDependencies": {
@@ -21,7 +23,9 @@
   "scripts": {
     "build": "tsc -p ./src && tsc lib/tc.ts",
     "watch": "tsc -w -p ./src",
-    "watch-lib": "tsc -w lib/tc.ts"
+    "watch-lib": "tsc -w lib/tc.ts",
+    "preserver": "tsc -p ./tests/server/tsconfig.json",
+    "server": "DEBUG=server node ./build/server/server.js"
   },
   "repository": {
     "type": "git",

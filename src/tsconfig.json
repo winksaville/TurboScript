@@ -1,21 +1,12 @@
 {
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "module": "system",
-    "target": "es6",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "types": [
-      "node"
-    ],
     "outFile": "../lib/turbo.js"
   },
   "files": [
     "main.ts"
   ],
   "exclude": [
-    "node_modules",
-    "bin",
     "tests"
   ]
 }

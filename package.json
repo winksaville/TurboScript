@@ -24,6 +24,8 @@
     "build": "tsc -p ./src && tsc lib/tc.ts",
     "watch": "tsc -w -p ./src",
     "watch-lib": "tsc -w lib/tc.ts",
+    "pretest:build": "mkdir -p ./build/tests",
+    "test:build": "./bin/tc tests/addTwo.tbs --out ./build/tests/addTwo.wasm",
     "preserver": "tsc -p ./tests/server/tsconfig.json",
     "server": "DEBUG=server node ./build/server/server.js"
   },
